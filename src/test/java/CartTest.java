@@ -8,19 +8,31 @@ public class CartTest {
     public void addIPodToCart() {
         Cart cart = new Cart();
 
-        cart.addItem(new Item("IPad Pro"));
+        cart.addItem(new Product("IPad Pro"), 2);
 
         assertEquals(cart.getItems().size(), 1);
-        assertEquals(cart.getItems().get(0).getName(), "IPad Pro");
+        assertEquals(cart.getItems().get(0).getProduct().getName(), "IPad Pro");
     }
 
     @Test
     public void addHeroInkPenToCart() {
         Cart cart = new Cart();
 
-        cart.addItem(new Item("Hero Ink Pen"));
+        cart.addItem(new Product("Hero Ink Pen"), 2);
 
         assertEquals(cart.getItems().size(), 1);
-        assertEquals(cart.getItems().get(0).getName(), "Hero Ink Pen");
+        assertEquals(cart.getItems().get(0).getProduct().getName(), "Hero Ink Pen");
+    }
+
+    @Test
+    public void addTwoQuantityOfBats() {
+        Cart cart = new Cart();
+
+        cart.addItem(new Product("GM Cricket Bat"), 2);
+
+        assertEquals(cart.getItems().size(), 1);
+        Item item = cart.getItems().get(0);
+        assertEquals(item.getProduct().getName(), "GM Cricket Bat");
+        assertEquals(item.getQuantity(), 2);
     }
 }
