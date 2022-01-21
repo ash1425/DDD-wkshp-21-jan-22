@@ -9,6 +9,6 @@ public class Cart {
     }
 
     public List<Item> getItems() {
-        return items;
+        return new ArrayList<>(items);
     }
 }
