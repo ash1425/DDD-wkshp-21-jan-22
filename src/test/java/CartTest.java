@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -34,5 +35,15 @@ public class CartTest {
         Item item = cart.getItems().get(0);
         assertEquals(item.getProduct().getName(), "GM Cricket Bat");
         assertEquals(item.getQuantity(), 2);
+    }
+
+    @Test
+    public void removeIpadProFromCart() {
+        Cart cart = new Cart();
+
+        cart.addItem(new Product("IPad Pro"), 2);
+        cart.removeItem(new Product("IPad Pro"));
+
+        assertTrue(cart.getItems().isEmpty());
     }
 }

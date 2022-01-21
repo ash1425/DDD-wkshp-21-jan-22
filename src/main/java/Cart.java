@@ -11,4 +11,10 @@ public class Cart {
     public List<Item> getItems() {
         return new ArrayList<>(items);
     }
+
+    public void removeItem(Product product) {
+        items = items.stream()
+                .filter(item -> !item.getProduct().equals(product))
+                .toList();
+    }
 }
