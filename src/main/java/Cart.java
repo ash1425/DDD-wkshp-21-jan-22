@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Cart {
     List<Item> items = new ArrayList<>();
+    List<String> removedItemNames = new ArrayList<>();
 
     public void addItem(Product product, int quantity) {
         items.add(new Item(product, quantity));
@@ -14,7 +15,17 @@ public class Cart {
 
     public void removeItem(Product product) {
         items = items.stream()
-                .filter(item -> !item.getProduct().equals(product))
-                .toList();
+            .filter(item -> {
+                if (item.getProduct().equals(product)) {
+                    removedItemNames.add(product.getName());
+                    return false;
+                }
+                return true;
+            })
+            .toList();
+    }
+
+    public List<String> getRemovedItemNames() {
+        return removedItemNames;
     }
 }

@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.List;
 import org.junit.jupiter.api.Test;
 
 public class CartTest {
@@ -45,5 +46,6 @@ public class CartTest {
         cart.removeItem(new Product("IPad Pro"));
 
         assertTrue(cart.getItems().isEmpty());
+        assertEquals(cart.getRemovedItemNames(), List.of("IPad Pro"));
     }
 }
