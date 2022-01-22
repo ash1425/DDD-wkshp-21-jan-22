@@ -66,4 +66,16 @@ public class CartTest {
         assertNotEquals(cart1, cart2);
         assertEquals(cart1, cart1);
     }
+
+    @Test
+    void shouldCheckoutTheCard() {
+        Cart cart = new Cart();
+        cart.addItem(new Product("IPad Pro", new Price(800, Currency.getInstance("USD"))), 2);
+        cart.addItem(new Product("Pen", new Price(1, Currency.getInstance("USD"))), 3);
+
+        Order order = cart.checkout();
+
+        assertEquals(5, order.getProducts().size());
+        assertTrue(cart.isCheckedOut());
+    }
 }
