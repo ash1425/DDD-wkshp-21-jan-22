@@ -1,8 +1,7 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.util.List;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CartTest {
 
@@ -47,5 +46,17 @@ public class CartTest {
 
         assertTrue(cart.getItems().isEmpty());
         assertEquals(cart.getRemovedItemNames(), List.of("IPad Pro"));
+    }
+
+    @Test
+    public void cartUniqueness() {
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+
+        cart1.addItem(new Product("IPad Pro"), 2);
+        cart2.addItem(new Product("IPad Pro"), 2);
+
+        assertNotEquals(cart1, cart2);
+        assertEquals(cart1, cart1);
     }
 }
