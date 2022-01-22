@@ -1,3 +1,5 @@
+package tw.workshop.ddd.domain;
+
 import java.util.ArrayList;
 import java.util.List;
 

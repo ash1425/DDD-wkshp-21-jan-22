@@ -1,3 +1,5 @@
+package tw.workshop.ddd.domain;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -16,7 +18,8 @@ public class CartTest {
 
         assertEquals(cart.getItems().size(), 1);
         assertEquals(cart.getItems().get(0).getProduct().getName(), "IPad Pro");
-        assertEquals(cart.getItems().get(0).getProduct().getPrice(), new Price(800, Currency.getInstance("USD")));
+        assertEquals(cart.getItems().get(0).getProduct().getPrice(),
+            new Price(800, Currency.getInstance("USD")));
     }
 
     @Test

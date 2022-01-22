@@ -1,3 +1,5 @@
+package tw.workshop.ddd.domain;
+
 public class Item {
     private final Product product;
     private final int quantity;

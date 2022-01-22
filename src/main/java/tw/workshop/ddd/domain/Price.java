@@ -1,3 +1,5 @@
+package tw.workshop.ddd.domain;
+
 import java.util.Currency;
 import java.util.Objects;
 
