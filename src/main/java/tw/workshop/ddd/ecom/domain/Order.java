@@ -14,4 +14,13 @@ public class Order {
     public List<Product> getProducts() {
         return new ArrayList<>(products);
     }
+
+    public double total() {
+        double totalPrice = 0, shippingCost = 0;
+        for (Product p : products) {
+            totalPrice = totalPrice + p.getPrice().getAmount();
+            shippingCost = shippingCost + p.getWeight() * 0.01;
+        }
+        return totalPrice + shippingCost;
+    }
 }

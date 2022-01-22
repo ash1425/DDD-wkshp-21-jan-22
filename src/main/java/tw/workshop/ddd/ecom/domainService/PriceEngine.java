@@ -15,6 +15,6 @@ public class PriceEngine {
     }
 
     public double getPrice(String productName) {
-        return competitorPrices.get(productName).getPrice() - competitorPrices.get(productName).getPrice() * 0.1;
+        return competitorPrices.get(productName).getAmount() - competitorPrices.get(productName).getAmount() * 0.1;
     }
 }

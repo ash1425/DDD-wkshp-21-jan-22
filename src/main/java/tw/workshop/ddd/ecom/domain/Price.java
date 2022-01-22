@@ -12,6 +12,10 @@ public class Price {
         this.currency = currency;
     }
 
+    public double getAmount() {
+        return amount;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -27,9 +31,5 @@ public class Price {
     @Override
     public int hashCode() {
         return Objects.hash(amount, currency);
-    }
-
-    public double getPrice() {
-        return amount;
     }
 }
