@@ -1,4 +1,4 @@
-package tw.workshop.ddd.domain;
+package tw.workshop.ddd.ecom.domain;
 
 import java.util.Currency;
 import java.util.Objects;

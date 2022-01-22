@@ -1,4 +1,4 @@
-package tw.workshop.ddd.domainService;
+package tw.workshop.ddd.ecom.domainService;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package tw.workshop.ddd.domain;
+package tw.workshop.ddd.ecom.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

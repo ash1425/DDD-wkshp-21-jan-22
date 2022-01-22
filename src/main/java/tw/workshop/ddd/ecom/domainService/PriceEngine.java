@@ -1,6 +1,6 @@
-package tw.workshop.ddd.domainService;
+package tw.workshop.ddd.ecom.domainService;
 
-import tw.workshop.ddd.domain.Price;
+import tw.workshop.ddd.ecom.domain.Price;
 
 import java.util.Currency;
 import java.util.HashMap;

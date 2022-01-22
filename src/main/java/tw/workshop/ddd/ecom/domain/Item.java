@@ -1,4 +1,4 @@
-package tw.workshop.ddd.domain;
+package tw.workshop.ddd.ecom.domain;
 
 public class Item {
     private final Product product;
